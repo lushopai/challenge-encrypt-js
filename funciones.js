@@ -12,7 +12,7 @@ let textinput = document.getElementById("input_text_encrypt");
 let textoutput = document.getElementById("output_text_decrypt");
 let botonCopiar = document.getElementById("button_copiar");
 let contenedorPadre = document.querySelector(".result");
-const botonLimpiar = document.getElementById('button_limpiar'); 
+const botonLimpiar = document.getElementById('button_limpiar');
 
 const mensaje = document.querySelector(".output_text_decrypt");
 
@@ -85,7 +85,7 @@ function copiarAlPortapapeles() {
 
 
 function validadorInputs(e) {
-
+   
     if (e.inputType === "deleteContentBackward") {
         return;
     }
