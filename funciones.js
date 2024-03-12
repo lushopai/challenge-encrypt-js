@@ -73,7 +73,6 @@ function limpiar(e) {
 function copiarAlPortapapeles() {
     var textarea = document.getElementById("output_text_decrypt");
 
-    // Crea un área de transferencia y coloca el texto en ella
     navigator.clipboard.writeText(textarea.value)
         .then(function () {
             alert('Texto copiado al portapapeles');
@@ -90,19 +89,13 @@ function validadorInputs(e) {
     if (e.inputType === "deleteContentBackward") {
         return;
     }
-    if(textinput.value !== null){
-        botonLimpiar.disabled = false; // Habilita el botón
-
-    }else{
-        botonLimpiar.disabled = true; // Deshabilita el botón
-    }
     const valor = e.target.value.toLowerCase();
     console.log(valor);
     const regex = /[a-z]/;
-    //validar los carateres qlos
     if (!regex.test(valor)) {
         alert("Ingrese solo texto en minúsculas y sin caracteres especiales.");
         e.target.value = "";
     }
 
 }
+
